@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Ric-Art | Restauro Beni Culturali</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description"
+    content="Ric-Art di Riccardo Domenichelli. Restauratore di beni culturali con oltre 25 anni di esperienza nel restauro storico-artistico.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Playfair Display', 'serif'],
+            sans: ['Inter', 'sans-serif']
+          },
+          colors: {
+            gold: '#d8a84f',
+            dark: '#1f1f1f',
+            cream: '#fbf7e8'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Fade-in on scroll */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity .8s ease, transform .8s ease;
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body class="bg-stone-50 text-stone-800 font-sans">
+
+<!-- HEADER -->
+<header class="bg-white/90 backdrop-blur shadow sticky top-0 z-50">
+  <nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+    <a href="index.html">
+      <img src="images/logo.png" class="h-14" alt="Ric-Art">
+    </a>
+
+    <div class="hidden md:flex gap-10 font-semibold text-sm tracking-wide">
+      <a href="index.html" class="text-gold border-b-2 border-gold pb-1">Home</a>
+      <a href="galleria.html" class="hover:text-gold transition">Galleria</a>
+      <a href="contatti.html" class="hover:text-gold transition">Contatti</a>
+    </div>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="relative min-h-[85vh] flex items-center justify-center text-center">
+  <img src="images/hero-bg.jpg" class="absolute inset-0 w-full h-full object-cover">
+  <div class="absolute inset-0 bg-black/60"></div>
+
+  <div class="relative z-10 max-w-5xl px-6 text-white reveal">
+    <h1 class="text-5xl sm:text-7xl font-display font-bold tracking-wide">
+      <span class="text-gold">ARTE</span>
+      <span class="mx-4 text-stone-200">PASSIONE</span>
+      <span class="text-gold">VALORE</span>
+    </h1>
+
+    <p class="mt-6 text-xl text-stone-200">
+      Restauro professionale di beni storico-artistici e culturali
+    </p>
+
+    <a href="contatti.html"
+      class="inline-flex items-center gap-3 mt-10 px-8 py-4 bg-gold text-dark font-semibold rounded-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-0.5">
+      Richiedi informazioni
+      <span class="transition-transform group-hover:translate-x-1">→</span>
+    </a>
+  </div>
+</section>
+
+<!-- CHI SIAMO -->
+<section class="py-24 bg-white reveal">
+  <div class="max-w-3xl mx-auto px-6 text-center">
+    <h2 class="text-4xl font-display font-bold mb-6">Chi Siamo</h2>
+    <p class="text-lg text-stone-600 mb-4">
+      Ric-Art di Riccardo Domenichelli opera nel settore del
+      <strong>restauro dei beni culturali</strong> con oltre 25 anni di esperienza.
+    </p>
+    <p class="text-lg text-stone-600">
+      Interventi su chiese, monumenti storici, edifici civili e strutture moderne,
+      nel pieno rispetto del patrimonio artistico.
+    </p>
+  </div>
+</section>
+
+<!-- SERVIZI -->
+<section class="py-24 bg-stone-100 reveal">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-4xl font-display font-bold text-center mb-14">
+      Ambiti di Intervento
+    </h2>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Card -->
+      <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+        <img src="images/lapidei.jpg" class="h-48 w-full object-cover">
+        <div class="p-6">
+          <h3 class="font-display text-xl font-bold mb-2">Lapidei</h3>
+          <p class="text-sm text-stone-600">
+            Pietra, marmo e materiali lapidei storici.
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+        <img src="images/murali.jpg" class="h-48 w-full object-cover">
+        <div class="p-6">
+          <h3 class="font-display text-xl font-bold mb-2">Murali</h3>
+          <p class="text-sm text-stone-600">
+            Affreschi e decorazioni parietali.
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+        <img src="images/tinteggiature.jpg" class="h-48 w-full object-cover">
+        <div class="p-6">
+          <h3 class="font-display text-xl font-bold mb-2">Tinteggiature</h3>
+          <p class="text-sm text-stone-600">
+            Edifici storici e contemporanei.
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+        <img src="images/archeologia.jpg" class="h-48 w-full object-cover">
+        <div class="p-6">
+          <h3 class="font-display text-xl font-bold mb-2">Archeologia</h3>
+          <p class="text-sm text-stone-600">
+            Reperti e contesti archeologici.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUALIFICA -->
+<section class="bg-dark py-24 text-stone-300 reveal">
+  <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-14">
+    <img src="images/emblem-italy.png" class="w-36" alt="Emblema Repubblica Italiana">
+
+    <div>
+      <h3 class="text-3xl font-display font-bold text-gold mb-4">
+        Restauratore di Beni Culturali
+      </h3>
+      <p class="leading-relaxed max-w-2xl">
+        Qualifica riconosciuta ai sensi del D.M. 294/00 modificato dal D.M. 420/01,
+        operante dal 2002. Specializzato nel restauro di beni storico-artistici
+        con competenze certificate nella conservazione del patrimonio culturale italiano.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="bg-cream py-24 reveal">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <h2 class="text-4xl font-display font-bold mb-6">
+      Hai un progetto di restauro?
+    </h2>
+    <p class="text-stone-600 mb-10">
+      Contattaci per una consulenza gratuita. Valuteremo il tuo progetto
+      e forniremo un preventivo personalizzato.
+    </p>
+
+    <a href="contatti.html"
+      class="inline-flex items-center gap-3 px-10 py-4 bg-gold text-dark font-semibold rounded-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-0.5">
+      Richiedi informazioni
+      ✉️
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-stone-400 pt-20 pb-10 reveal">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12">
+
+    <div>
+      <img src="images/logo.png" class="h-14 mb-4">
+      <p class="text-sm">
+        Restauratore di beni culturali con oltre 25 anni di esperienza
+        nel restauro di beni storico-artistici.
+      </p>
+    </div>
+
+    <div>
+      <h4 class="font-display text-lg font-bold text-white mb-4">Contatti</h4>
+      <p>Strada delle Case 41/2</p>
+      <p>53042 Chianciano Terme (SI)</p>
+      <p class="mt-2">
+        <a href="tel:+393926472210" class="hover:text-gold transition">+39 392 6472210</a>
+      </p>
+      <p>
+        <a href="mailto:ric.art@tim.it" class="hover:text-gold transition">ric.art@tim.it</a>
+      </p>
+    </div>
+
+    <div>
+      <h4 class="font-display text-lg font-bold text-white mb-4">Social</h4>
+      <a href="https://instagram.com/riccardo_domenichelli"
+         target="_blank"
+         class="inline-flex items-center gap-2 hover:text-gold transition">
+        Instagram
+      </a>
+      <p class="mt-6 text-xs text-stone-500">
+        P.IVA 01453860528
+      </p>
+    </div>
+
+  </div>
+
+  <div class="mt-14 text-center text-xs text-stone-500">
+    © 2026 Ric-Art di Riccardo Domenichelli. Tutti i diritti riservati.
+  </div>
+</footer>
+
+<!-- SCRIPT SCROLL REVEAL -->
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, { threshold: 0.15 });
+
+  reveals.forEach(r => observer.observe(r));
+</script>
+
+</body>
+</html>

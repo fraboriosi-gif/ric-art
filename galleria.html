@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Galleria | Ric-Art Restauro Beni Culturali</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description"
+    content="Galleria lavori di Ric-Art. Restauro di beni culturali, lapidei, affreschi, superfici murarie e contesti archeologici.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Playfair Display', 'serif'],
+            sans: ['Inter', 'sans-serif']
+          },
+          colors: {
+            gold: '#d8a84f',
+            dark: '#1f1f1f',
+            cream: '#fbf7e8'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity .8s ease, transform .8s ease;
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    /* lightbox styles */
+    .lb-backdrop{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.85);z-index:60}
+    .lb-backdrop[aria-hidden="false"]{display:flex}
+    .lb-backdrop img{max-width:95%;max-height:85%;border-radius:6px}
+    .lb-close{position:absolute;right:1rem;top:1rem;color:#fff;background:transparent;border:0;font-size:28px;cursor:pointer}
+    .thumb-click{cursor:pointer;transition:transform .25s ease}
+    .thumb-click:hover{transform:translateY(-6px) scale(1.03)}
+    .lb-nav{position:absolute;top:50%;transform:translateY(-50%);color:#fff;background:transparent;border:0;font-size:36px;cursor:pointer;padding:8px}
+    .lb-nav.left{left:1rem}
+    .lb-nav.right{right:1rem}
+  </style>
+</head>
+
+<body class="bg-stone-50 text-stone-800 font-sans">
+
+<!-- HEADER -->
+<header class="bg-white/90 backdrop-blur shadow sticky top-0 z-50">
+  <nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+    <a href="index.html">
+      <img src="images/logo.png" class="h-14" alt="Ric-Art">
+    </a>
+
+    <div class="hidden md:flex gap-10 font-semibold text-sm tracking-wide">
+      <a href="index.html" class="hover:text-gold transition">Home</a>
+      <a href="galleria.html" class="text-gold border-b-2 border-gold pb-1">Galleria</a>
+      <a href="contatti.html" class="hover:text-gold transition">Contatti</a>
+    </div>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="relative py-32 bg-dark text-center text-stone-200">
+  <div class="max-w-4xl mx-auto px-6 reveal">
+    <h1 class="text-5xl font-display font-bold text-gold mb-6">
+      Galleria Lavori
+    </h1>
+    <p class="text-lg">
+      Una selezione di interventi di restauro eseguiti su beni culturali,
+      edifici storici e superfici artistiche.
+    </p>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="py-20 bg-white reveal">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <p class="text-lg text-stone-600">
+      Ogni intervento nasce da uno studio approfondito del manufatto,
+      dall’analisi dei materiali e dal rispetto della storia dell’opera.
+      La galleria documenta alcune delle principali tipologie di restauro
+      affrontate nel corso dell’attività professionale.
+    </p>
+  </div>
+</section>
+
+<!-- SEZIONE: LAPIDEI -->
+<!-- Interventi (importati e semplificati da galleria2) -->
+<section class="py-12 bg-stone-50 reveal">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-display font-bold mb-8">Selezione interventi</h2>
+
+    <div class="space-y-8">
+      <!-- Collescipoli -->
+      <article class="flex flex-col md:flex-row md:items-start gap-6">
+        <div class="md:w-1/2">
+          <h3 class="text-xl font-semibold">Restauro degli stucchi policromi — Chiesa di S. Maria Maggiore, Collescipoli (TR)</h3>
+          <p class="text-sm text-stone-600 mt-2">Pulitura, consolidamento e reintegrazioni cromatiche.</p>
+        </div>
+        <div class="md:w-1/2 flex gap-3">
+          <img class="w-32 h-20 object-cover rounded-md thumb-click" src="images/IMG-20170726-WA0000.jpg" alt="Collescipoli 1" data-full="images/IMG-20170726-WA0000.jpg">
+          <img class="w-32 h-20 object-cover rounded-md thumb-click" src="images/IMG-20170726-WA0004.jpg" alt="Collescipoli 2" data-full="images/IMG-20170726-WA0004.jpg">
+          <img class="w-32 h-20 object-cover rounded-md thumb-click" src="images/s-maria_COLLESCIPOLI.jpg" alt="Collescipoli 3" data-full="images/s-maria_COLLESCIPOLI.jpg">
+        </div>
+      </article>
+
+      <!-- Livorno -->
+      <article class="flex flex-col md:flex-row md:items-start gap-6">
+        <div class="md:w-1/2">
+          <h3 class="text-xl font-semibold">Restauro affreschi, decori e materiali lignei — Biblioteca Labronica "F. Guerrazzi", Livorno</h3>
+          <p class="text-sm text-stone-600 mt-2">Conservazione e integrazione dei decori.</p>
+        </div>
+        <div class="md:w-1/2 flex gap-3">
+          <img class="w-32 h-20 object-cover rounded-md thumb-click" src="images/IMG-20170726-WA0002.jpg" alt="Livorno 1" data-full="images/IMG-20170726-WA0002.jpg">
+          <img class="w-32 h-20 object-cover rounded-md thumb-click" src="images/IMG-20170726-WA0006.jpg" alt="Livorno 2" data-full="images/IMG-20170726-WA0006.jpg">
+          <img class="w-32 h-20 object-cover rounded-md thumb-click" src="images/IMG-20170726-WA0007.jpg" alt="Livorno 3" data-full="images/IMG-20170726-WA0007.jpg">
+        </div>
+      </article>
+
+      <!-- Sansedoni / Spannocchi / Salimbeni -->
+      <article class="flex flex-col md:flex-row md:items-start gap-6">
+        <div class="md:w-1/2">
+          <h3 class="text-xl font-semibold">Restauro di paramenti di facciata — Siena (diversi interventi)</h3>
+          <p class="text-sm text-stone-600 mt-2">Interventi su Palazzo Sansedoni, Palazzo Spannocchi e Palazzo Salimbeni.</p>
+        </div>
+        <div class="md:w-1/2 flex gap-3">
+          <img class="w-32 h-20 object-cover rounded-md thumb-click" src="images/sansedoni.jpg" alt="Sansedoni" data-full="images/sansedoni.jpg">
+          <img class="w-32 h-20 object-cover rounded-md thumb-click" src="images/PalazzoSpannocchiSienaA.JPG" alt="Spannocchi" data-full="images/PalazzoSpannocchiSienaA.JPG">
+          <img class="w-32 h-20 object-cover rounded-md thumb-click" src="images/palazzo_salimbeni.jpg" alt="Salimbeni" data-full="images/palazzo_salimbeni.jpg">
+        </div>
+      </article>
+
+      <!-- Campanile Duomo Siena -->
+      <article class="flex flex-col md:flex-row md:items-start gap-6">
+        <div class="md:w-1/2">
+          <h3 class="text-xl font-semibold">Restauro del paramento lapideo del campanile — Duomo di Siena (1999-2000)</h3>
+          <p class="text-sm text-stone-600 mt-2">Intervento su conci e giunti lapidei.</p>
+        </div>
+        <div class="md:w-1/2 flex gap-3">
+          <img class="w-32 h-20 object-cover rounded-md thumb-click" src="images/IMG-20170726-WA0009.jpg" alt="Campanile 1" data-full="images/IMG-20170726-WA0009.jpg">
+          <img class="w-32 h-20 object-cover rounded-md thumb-click" src="images/IMG-20170726-WA0021.jpg" alt="Campanile 2" data-full="images/IMG-20170726-WA0021.jpg">
+          <img class="w-32 h-20 object-cover rounded-md thumb-click" src="images/IMG-20170726-WA0022.jpg" alt="Campanile 3" data-full="images/IMG-20170726-WA0022.jpg">
+        </div>
+      </article>
+
+      <!-- Battistero -->
+      <article class="flex flex-col md:flex-row md:items-start gap-6">
+        <div class="md:w-1/2">
+          <h3 class="text-xl font-semibold">Restauro facciata Battistero — Duomo di Siena (1992)</h3>
+          <p class="text-sm text-stone-600 mt-2">Consolidamento e pulitura selettiva.</p>
+        </div>
+        <div class="md:w-1/2 flex gap-3">
+          <img class="w-32 h-20 object-cover rounded-md thumb-click" src="images/battistero.jpg" alt="Battistero 1" data-full="images/battistero.jpg">
+          <img class="w-32 h-20 object-cover rounded-md thumb-click" src="images/IMG-20170726-WA0014.jpg" alt="Battistero 2" data-full="images/IMG-20170726-WA0014.jpg">
+          <img class="w-32 h-20 object-cover rounded-md thumb-click" src="images/IMG-20170726-WA0015.jpg" alt="Battistero 3" data-full="images/IMG-20170726-WA0015.jpg">
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="bg-cream py-24 reveal">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <h2 class="text-4xl font-display font-bold mb-6">
+      Vuoi approfondire un intervento?
+    </h2>
+    <p class="text-stone-600 mb-10">
+      Contattaci per ricevere informazioni dettagliate sui lavori eseguiti
+      o per una consulenza sul tuo progetto.
+    </p>
+
+    <a href="contatti.html"
+      class="inline-flex items-center gap-3 px-10 py-4 bg-gold text-dark font-semibold rounded-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-0.5">
+      Contattaci
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-stone-400 pt-20 pb-10 reveal">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12">
+
+    <div>
+      <img src="images/logo.png" class="h-14 mb-4">
+      <p class="text-sm">
+        Restauratore di beni culturali con oltre 25 anni di esperienza
+        nel restauro di beni storico-artistici.
+      </p>
+    </div>
+
+    <div>
+      <h4 class="font-display text-lg font-bold text-white mb-4">Contatti</h4>
+      <p>Strada delle Case 41/2</p>
+      <p>53042 Chianciano Terme (SI)</p>
+      <p class="mt-2">
+        <a href="tel:+393926472210" class="hover:text-gold transition">+39 392 6472210</a>
+      </p>
+      <p>
+        <a href="mailto:ric.art@tim.it" class="hover:text-gold transition">ric.art@tim.it</a>
+      </p>
+    </div>
+
+    <div>
+      <h4 class="font-display text-lg font-bold text-white mb-4">Social</h4>
+      <a href="https://instagram.com/riccardo_domenichelli"
+         target="_blank"
+         class="hover:text-gold transition">
+        Instagram
+      </a>
+      <p class="mt-6 text-xs text-stone-500">
+        P.IVA 01453860528
+      </p>
+    </div>
+
+  </div>
+
+  <div class="mt-14 text-center text-xs text-stone-500">
+    © 2026 Ric-Art di Riccardo Domenichelli. Tutti i diritti riservati.
+  </div>
+</footer>
+
+<!-- LIGHTBOX MARKUP -->
+<div id="lb" class="lb-backdrop" aria-hidden="true">
+  <button id="lb-close" class="lb-close" aria-label="Chiudi">×</button>
+  <button id="lb-prev" class="lb-nav left" aria-label="Precedente">‹</button>
+  <img id="lb-img" src="" alt="">
+  <button id="lb-next" class="lb-nav right" aria-label="Successivo">›</button>
+</div>
+
+
+<!-- REVEAL SCRIPT -->
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, { threshold: 0.15 });
+
+  reveals.forEach(r => observer.observe(r));
+</script>
+
+<!-- LIGHTBOX SCRIPT -->
+<script>
+  (function(){
+    const lb = document.getElementById('lb');
+    const lbImg = document.getElementById('lb-img');
+    const btnClose = document.getElementById('lb-close');
+    const btnPrev = document.getElementById('lb-prev');
+    const btnNext = document.getElementById('lb-next');
+    let group = [];
+    let idx = 0;
+
+    function open(g,i){ group = g; idx = i; lbImg.src = group[idx]; lb.setAttribute('aria-hidden','false'); }
+    function close(){ lb.setAttribute('aria-hidden','true'); lbImg.src=''; }
+    function nav(step){ idx = (idx + step + group.length) % group.length; lbImg.src = group[idx]; }
+
+    document.querySelectorAll('.thumb-click').forEach(el => {
+      el.addEventListener('click', e => {
+        const article = el.closest('article');
+        const thumbs = Array.from(article.querySelectorAll('.thumb-click'));
+        const g = thumbs.map(t => t.dataset.full || t.src);
+        const i = thumbs.indexOf(el);
+        open(g,i);
+      });
+    });
+
+    btnClose.addEventListener('click', close);
+    btnPrev.addEventListener('click', ()=>nav(-1));
+    btnNext.addEventListener('click', ()=>nav(1));
+    lb.addEventListener('click', e => { if(e.target === lb) close(); });
+    document.addEventListener('keydown', e => {
+      if(lb.getAttribute('aria-hidden') === 'false'){
+        if(e.key === 'ArrowRight') nav(1);
+        if(e.key === 'ArrowLeft') nav(-1);
+        if(e.key === 'Escape') close();
+      }
+    });
+  })();
+</script>
+
+</body>
+</html>
