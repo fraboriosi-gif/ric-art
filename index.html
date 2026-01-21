@@ -46,6 +46,26 @@
       transform: translateY(0);
     }
   </style>
+<style>
+  .hero-slide {
+    transition: opacity 2.5s ease-in-out;
+    animation: kenburns 14s ease-in-out infinite;
+  }
+
+  @keyframes kenburns {
+    0% {
+      transform: scale(1) translate(0, 0);
+    }
+    100% {
+      transform: scale(1.06) translate(-1%, -1%);
+    }
+  }
+
+  /* La seconda immagine parte leggermente diversa */
+  .hero-slide:nth-child(2) {
+    animation-direction: alternate-reverse;
+  }
+</style>
 </head>
 
 <body class="bg-stone-50 text-stone-800 font-sans">
@@ -66,11 +86,23 @@
 </header>
 
 <!-- HERO -->
-<section class="relative min-h-[85vh] flex items-center justify-center text-center">
-  <img src="images/hero-bg.jpg" class="absolute inset-0 w-full h-full object-cover">
+<section class="relative min-h-[85vh] flex items-center justify-center text-center overflow-hidden">
+
+  <!-- SLIDES -->
+  <div class="absolute inset-0">
+    <img
+      src="images/hero-1.jpg"
+      class="hero-slide absolute inset-0 w-full h-full object-cover opacity-100">
+    <img
+      src="images/hero-2.jpg"
+      class="hero-slide absolute inset-0 w-full h-full object-cover opacity-0">
+  </div>
+
+  <!-- OVERLAY -->
   <div class="absolute inset-0 bg-black/60"></div>
 
-  <div class="relative z-10 max-w-5xl px-6 text-white reveal">
+  <!-- CONTENT -->
+  <div class="relative z-10 max-w-5xl px-6 pb-28 text-white reveal">
     <h1 class="text-5xl sm:text-7xl font-display font-bold tracking-wide">
       <span class="text-gold">ARTE</span>
       <span class="mx-4 text-stone-200">PASSIONE</span>
@@ -82,9 +114,9 @@
     </p>
 
     <a href="contatti.html"
-      class="inline-flex items-center gap-3 mt-10 px-8 py-4 bg-gold text-dark font-semibold rounded-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-0.5">
+      class="inline-flex items-center gap-3 mt-24 px-8 py-4 bg-gold text-dark font-semibold rounded-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-0.5">
       Richiedi informazioni
-      <span class="transition-transform group-hover:translate-x-1">→</span>
+      →
     </a>
   </div>
 </section>
@@ -92,85 +124,117 @@
 <!-- CHI SIAMO -->
 <section class="py-24 bg-white reveal">
   <div class="max-w-3xl mx-auto px-6 text-center">
-    <h2 class="text-4xl font-display font-bold mb-6">Chi Siamo</h2>
+    <h2 class="text-4xl font-display font-bold mb-6">Restauro e Competenza</h2>
     <p class="text-lg text-stone-600 mb-4">
       Ric-Art di Riccardo Domenichelli opera nel settore del
       <strong>di beni storico-artistici e culturali</strong> con oltre 25 anni di esperienza.
     </p>
     <p class="text-lg text-stone-600">
       Gli interventi spaziano dalle decorazioni e tinteggiature per le più svariate strutture architettoniche - da antiche chiese e monumenti storici fino ad abitazioni moderne e locali commerciali - garantendo sempre la massima qualità e rispetto per il patrimonio artistico.
-
+    </p>
+    <p class="text-lg text-stone-600">
+      Ogni intervento è guidato dal rispetto dei materiali originali, dalla conoscenza delle tecniche tradizionali e dall’attenzione alla storia dell’opera, con l’obiettivo di preservarne il valore nel tempo.
     </p>
   </div>
 </section>
 
-<!-- SERVIZI -->
-<section class="py-24 bg-stone-100 reveal">
+<!-- SERVIZI --><section class="py-28 bg-stone-100 reveal">
   <div class="max-w-7xl mx-auto px-6">
-    <h2 class="text-4xl font-display font-bold text-center mb-14">
-      Ambiti di Intervento
+
+    <h2 class="text-4xl font-display font-bold text-center mb-20">
+      Aree di intervento
     </h2>
 
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-      <!-- Card -->
-      <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
-        <img src="images/lapidei.jpg" class="h-48 w-full object-cover">
-        <div class="p-6">
-          <h3 class="font-display text-xl font-bold mb-2">Lapidei</h3>
-          <p class="text-sm text-stone-600">
-            Pietra, marmo e materiali lapidei storici.
+    <div class="space-y-20">
+
+      <!-- LAPIDEI -->
+      <div class="flex flex-col lg:flex-row items-center gap-12">
+        <img
+          src="images/lapidei.jpg"
+          class="w-full lg:w-2/3 "
+          alt="Restauro lapideo">
+
+        <div class="lg:w-1/3">
+          <h3 class="font-display text-2xl font-bold mb-4">Lapidei</h3>
+          <p class="text-stone-600 leading-relaxed">
+            Interventi su pietra, marmo e materiali lapidei storici,
+            finalizzati alla conservazione e al recupero delle superfici originali.
           </p>
         </div>
       </div>
 
-      <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
-        <img src="images/murali.jpg" class="h-48 w-full object-cover">
-        <div class="p-6">
-          <h3 class="font-display text-xl font-bold mb-2">Murali</h3>
-          <p class="text-sm text-stone-600">
-            Affreschi e decorazioni parietali.
+      <!-- MURALI -->
+      <div class="flex flex-col lg:flex-row-reverse items-center gap-12">
+        <img
+          src="images/murali.jpg"
+          class="w-full lg:w-2/3 "
+          alt="Restauro murale">
+
+        <div class="lg:w-1/3">
+          <h3 class="font-display text-2xl font-bold mb-4">Murali e Affreschi</h3>
+          <p class="text-stone-600 leading-relaxed">
+            Restauro di superfici decorate, affreschi e pitture murali,
+            con tecniche rispettose dei materiali e della storia dell’opera.
           </p>
         </div>
       </div>
 
-      <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
-        <img src="images/tinteggiature.jpg" class="h-48 w-full object-cover">
-        <div class="p-6">
-          <h3 class="font-display text-xl font-bold mb-2">Tinteggiature</h3>
-          <p class="text-sm text-stone-600">
-            Edifici storici e contemporanei.
+      <!-- TINTEGGIATURE -->
+      <div class="flex flex-col lg:flex-row items-center gap-12">
+        <img
+          src="images/tinteggiature.jpg"
+          class="w-full lg:w-2/3 "
+          alt="Tinteggiature storiche">
+
+        <div class="lg:w-1/3">
+          <h3 class="font-display text-2xl font-bold mb-4">Tinteggiature</h3>
+          <p class="text-stone-600 leading-relaxed">
+            Interventi su edifici storici e contemporanei,
+            con attenzione alla compatibilità dei materiali e al contesto architettonico.
           </p>
         </div>
       </div>
 
-      <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
-        <img src="images/archeologia.jpg" class="h-48 w-full object-cover">
-        <div class="p-6">
-          <h3 class="font-display text-xl font-bold mb-2">Archeologia</h3>
-          <p class="text-sm text-stone-600">
-            Reperti e contesti archeologici.
+      <!-- ARCHEOLOGIA -->
+      <div class="flex flex-col lg:flex-row-reverse items-center gap-12">
+        <img
+          src="images/archeologia.jpg"
+          class="w-full lg:w-2/3"
+          alt="Interventi archeologici">
+
+        <div class="lg:w-1/3">
+          <h3 class="font-display text-2xl font-bold mb-4">Archeologia</h3>
+          <p class="text-stone-600 leading-relaxed">
+            Conservazione e trattamento di contesti e reperti archeologici,
+            nel rispetto delle stratificazioni storiche.
           </p>
         </div>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- QUALIFICA -->
-<section class="bg-dark py-24 text-stone-300 reveal">
-  <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-14">
-    <img src="images/emblem-italy.png" class="w-36" alt="Emblema Repubblica Italiana">
 
-    <div>
-      <h3 class="text-3xl font-display font-bold text-gold mb-4">
-        Restauratore di Beni Culturali
-      </h3>
-      <p class="leading-relaxed max-w-2xl">
-        Qualifica riconosciuta ai sensi del D.M. 294/00 modificato dal D.M. 420/01,
-        operante dal 2002. Specializzato nel restauro di beni storico-artistici
-        con competenze certificate nella conservazione del patrimonio culturale italiano.
-      </p>
-    </div>
+<!-- QUALIFICA -->
+<section class="bg-dark py-28 text-stone-300 reveal">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+
+    <img
+      src="images/emblem-italy.png"
+      class="w-32 mx-auto mb-8 opacity-90"
+      alt="Emblema Repubblica Italiana">
+
+    <h3 class="text-3xl font-display font-bold text-gold mb-6">
+      Restauratore di Beni Culturali
+    </h3>
+
+    <p class="leading-relaxed text-lg max-w-3xl mx-auto">
+      Qualifica riconosciuta ai sensi del D.M. 294/00 modificato dal D.M. 420/01,
+      operante dal 2002. Specializzato nel restauro di beni storico-artistici
+      con competenze certificate nella conservazione del patrimonio culturale italiano.
+    </p>
+
   </div>
 </section>
 
@@ -219,6 +283,15 @@ Restauratore di beni culturali con oltre 25 anni di esperienza nel restauro di b
 
   reveals.forEach(r => observer.observe(r));
 </script>
+<script>
+  const slides = document.querySelectorAll('.hero-slide');
+  let current = 0;
 
+  setInterval(() => {
+    slides[current].style.opacity = 0;
+    current = (current + 1) % slides.length;
+    slides[current].style.opacity = 1;
+  }, 6000);
+</script>
 </body>
 </html>
