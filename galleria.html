@@ -61,20 +61,50 @@
 
 <body class="bg-stone-50 text-stone-800 font-sans">
 
+
 <!-- HEADER -->
 <header class="bg-white/90 backdrop-blur shadow sticky top-0 z-50">
   <nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-    <a href="index.html">
+    <!-- Logo -->
+    <a href="/">
       <img src="images/logo@2x.png" class="h-14" alt="Ric-Art">
     </a>
 
+    <!-- Desktop Menu -->
     <div class="hidden md:flex gap-10 font-semibold text-sm tracking-wide">
-      <a href="index.html" class="hover:text-gold transition">Home</a>
-      <a href="galleria.html" class="text-gold border-b-2 border-gold pb-1">Galleria</a>
-      <a href="contatti.html" class="hover:text-gold transition">Contatti</a>
+      <a href="/" class="hover:text-gold transition-colors duration-200">Home</a>
+      <a href="galleria.html" class="text-gold border-b-2 border-gold pb-1 transition-colors duration-200">Galleria</a>
+      <a href="contatti.html" class="hover:text-gold transition-colors duration-200">Contatti</a>
+    </div>
+
+    <!-- Mobile Hamburger -->
+    <div class="md:hidden">
+      <button id="mobile-menu-btn" class="focus:outline-none">
+        <svg class="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
     </div>
   </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden bg-white/95 backdrop-blur shadow-md md:hidden">
+    <a href="/" class="block px-6 py-3 border-b border-gray-200 text-gold font-semibold">Home</a>
+    <a href="galleria.html" class="block px-6 py-3 border-b border-gray-200 hover:text-gold transition">Galleria</a>
+    <a href="contatti.html" class="block px-6 py-3 hover:text-gold transition">Contatti</a>
+  </div>
 </header>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
+
 
 <!-- HERO -->
 <section class="relative py-32 bg-dark text-center text-stone-200">
