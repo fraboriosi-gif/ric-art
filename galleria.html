@@ -35,15 +35,17 @@
   </script>
 
   <style>
-    .reveal {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: opacity .8s ease, transform .8s ease;
-    }
-    .reveal.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .45s ease-out, transform .45s ease-out;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
     /* lightbox styles */
     .lb-backdrop{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.85);z-index:60}
     .lb-backdrop[aria-hidden="false"]{display:flex}
@@ -67,8 +69,8 @@
     </a>
 
     <div class="hidden md:flex gap-10 font-semibold text-sm tracking-wide">
-      <a href="index.html" class="text-gold border-b-2 border-gold pb-1">Home</a>
-      <a href="galleria.html" class="hover:text-gold transition">Galleria</a>
+      <a href="index.html" class="hover:text-gold transition">Home</a>
+      <a href="galleria.html" class="text-gold border-b-2 border-gold pb-1">Galleria</a>
       <a href="contatti.html" class="hover:text-gold transition">Contatti</a>
     </div>
   </nav>
@@ -480,16 +482,25 @@ Restauratore di beni culturali con oltre 25 anni di esperienza nel restauro di b
 <!-- REVEAL SCRIPT -->
 <script>
   const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('active');
-      }
-    });
-  }, { threshold: 0.15 });
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          observer.unobserve(entry.target); // 👈 importantissimo
+        }
+      });
+    },
+    {
+      threshold: 0.05,
+      rootMargin: "0px 0px -60px 0px"
+    }
+  );
 
   reveals.forEach(r => observer.observe(r));
 </script>
+
 
 <!-- LIGHTBOX SCRIPT -->
 <script>
