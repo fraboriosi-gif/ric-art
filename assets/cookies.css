@@ -182,14 +182,3 @@
 #cookie-box.expanded .icon-close {
   display: inline-block;
 }
-
-
-@media (max-width: 768px) {
-  #cookie-box.minimized {
-    transform: translateX(0);
-  }
-
-  .cookie-toggle {
-    padding: 10px;
-  }
-}
