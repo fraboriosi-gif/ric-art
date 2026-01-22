@@ -22,7 +22,13 @@ document.addEventListener('DOMContentLoaded', function () {
       <div class="cookie-header">
         <img src="images/logo_footer.png" alt="Logo" class="cookie-logo">
         <h3 class="cookie-title">Gestisci Cookie</h3>
-        <button class="cookie-toggle">&#9654;</button>
+       
+        <button class="cookie-toggle" aria-label="Apri gestione cookie">
+  <span class="icon-cookie">&#9654;</span>
+
+  <span class="icon-close">X</span>
+</button>
+
       </div>
       <div class="cookie-body">
         <p>
@@ -34,8 +40,8 @@ document.addEventListener('DOMContentLoaded', function () {
       </div>
       <div class="cookie-footer">
        <div class="cookie-links">
-        <a class="text-sm font-bold text-stone-500 hover:text-amber-400 transition-colors" href="privacy.html">Privacy Policy</a> · 
-        <a class="text-sm font-bold text-stone-500 hover:text-amber-400 transition-colors" href="cookie-policy.html">Cookie Policy</a>
+        <a class="text-sm font-bold text-stone-500 hover:text-gold/90 transition-colors" href="privacy.html">Privacy Policy</a> · 
+        <a class="text-sm font-bold text-stone-500 hover:text-gold/90 transition-colors" href="cookie-policy.html">Cookie Policy</a>
       </div>
         <div class="cookie-actions">
           <button class="cookie-btn cookie-reject">Rifiuta</button>
