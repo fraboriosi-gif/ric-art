@@ -182,3 +182,19 @@
 #cookie-box.expanded .icon-close {
   display: inline-block;
 }
+
+
+@media (max-width: 768px) {
+.cookie-title {
+    display:none;
+  }
+  
+  #cookie-box.minimized {
+    left: 0;
+    transform: translateX(-160px);
+  }
+
+  #cookie-box.minimized:hover {
+    transform: translateX(-120px);
+  }
+}
