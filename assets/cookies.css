@@ -157,12 +157,12 @@
 }
 
 
-
-
 .icon-cookie {
   display: inline-flex;
   transition: transform .25s ease, opacity .25s ease;
   padding-bottom: 25px;
+ 
+
 }
 
 /* quando è aperto NON si vede */
