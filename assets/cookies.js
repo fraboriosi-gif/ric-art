@@ -91,6 +91,13 @@ document.addEventListener('DOMContentLoaded', function () {
   const box = document.getElementById('cookie-box');
   const toggle = box.querySelector('.cookie-toggle');
 
+const savedConsent = localStorage.getItem('cookieConsent');
+
+if (savedConsent === 'accepted') {
+  loadThirdParty();
+}
+
+
   // Click sulla linguetta: espandi o minimizza
   toggle.onclick = () => {
     if (box.classList.contains('minimized')) {
