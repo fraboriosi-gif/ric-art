@@ -74,6 +74,90 @@
   .hero-slide:nth-child(2) {
     animation-direction: alternate-reverse;
   }
+
+
+
+
+/* CONTENITORE SEZIONE */
+.section-wide {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* CARD IMMAGINE */
+.image-card {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border: 1px solid rgba(120,120,120,.35);
+  background: #f5f5f4;
+  transition: box-shadow .6s ease, border-color .6s ease;
+}
+
+.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.6s ease;
+}
+
+/* HOVER */
+.group:hover .image-card img {
+  transform: scale(1.06);
+}
+
+.group:hover .image-card {
+  border-color: #d8a84f;
+  box-shadow: 0 18px 40px rgba(0,0,0,.10);
+}
+
+/* TITOLO */
+.section-title {
+    font-size: clamp(1.6rem, 2.2vw, 2.4rem);
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+
+/* LINEA DORATA */
+.section-line {
+  height: 1px;
+  width: 0;
+  background-color: #d8a84f;
+  margin-top: 10px;
+  transition: width .8s ease;
+}
+
+.section-header:hover .section-line {
+  width: 8rem;
+}
+
+.image-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,.06),
+    rgba(0,0,0,.06)
+  );
+  pointer-events: none;
+}
+.section-left .grid { margin-left: 4rem; }
+.section-right .grid { margin-right: 4rem; }
+
+
+.section-header:hover + .grid {
+  transform: translateY(-4px);
+  transition: transform .8s ease;
+}
+
+.section-dot {
+  color: #d8a84f;
+  font-size: .85em;
+  padding: 0 5px 0 5px;
+}
+
+
 </style>
 </head>
 
@@ -193,101 +277,139 @@ transition-all duration-300 transform hover:-translate-y-1">
   </div>
 </section>
 
-<!-- SERVIZI --><section class="py-28 bg-stone-100 reveal">
-  <div class="max-w-7xl mx-auto px-6">
+<!-- SERVIZI -->
+ 
+<section class="py-32 bg-stone-100">
+  <div class="section-wide px-6 space-y-40">
 
-    <h2 class="text-4xl font-display font-bold text-center mb-20">
+
+    <h2 class="text-4xl font-display font-bold text-center mb-32 tracking-wide">
       Aree di intervento
     </h2>
 
-    <div class="space-y-20">
+    <div class="space-y-40">
 
-<section class="py-28 border-t border-stone-200">
-  <div class="max-w-7xl mx-auto px-6">
+<section>
+  <div class="section-header mb-6">
+  <h3 class="section-title font-display">
+  <span class="opacity-30">01</span><span class="section-dot">.</span>Affreschi
+</h3>
+    <div class="section-line"></div>
+  </div>
 
-    <h2 class="font-display text-4xl sm:text-3xl font-bold mb-14 tracking-wide">
-      Materiale Lapideo
-    </h2>
-
-    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-
-      <div class="group overflow-hidden border border-stone-300">
-        <img src="images/Lapidei-1.jpeg"
-             class="w-full h-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.03]">
+  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+    <div class="group">
+      <div class="image-card">
+        <img src="images/Affreschi_1.jpeg">
       </div>
-
-      <div class="group overflow-hidden border border-stone-300">
-        <img src="images/Lapidei-2.jpeg"
-             class="w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-[1.03]">
-      </div>
-
-      <div class="group overflow-hidden border border-stone-300">
-        <img src="images/Lapidei-3.jpeg"
-             class="w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-[1.03]">
-      </div>
-
-      <div class="group overflow-hidden border border-stone-300">
-        <img src="images/Lapidei-4.jpeg"
-             class="w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-[1.03]">
-      </div>
-
-      <div class="group overflow-hidden border border-stone-300">
-        <img src="images/Lapidei-5.jpeg"
-             class="w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-[1.03]">
-      </div>
-
     </div>
+    <div class="group"><div class="image-card"><img src="images/Affreschi_2.jpeg"></div></div>
+    <div class="group"><div class="image-card"><img src="images/Affreschi_3.jpeg"></div></div>
+    <div class="group"><div class="image-card"><img src="images/Affreschi_4.jpeg"></div></div>
+    <div class="group"><div class="image-card"><img src="images/Affreschi_5.jpeg"></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="section-header mb-6 flex justify-end">
+    <div class="text-right">
+       <h3 class="section-title font-display">
+  <span class="opacity-30">02</span><span class="section-dot">.</span>Pitture Murali
+</h3>
+      <div class="section-line ml-auto"></div>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+    <div class="group"><div class="image-card"><img src="images/Pitture_Murali_1.jpeg"></div></div>
+    <div class="group"><div class="image-card"><img src="images/Pitture_Murali_2.jpeg"></div></div>
+    <div class="group"><div class="image-card"><img src="images/Pitture_Murali_3.jpeg"></div></div>
+    <div class="group"><div class="image-card"><img src="images/Pitture_Murali_4.jpeg"></div></div>
+    <div class="group"><div class="image-card"><img src="images/Pitture_Murali_5.jpeg"></div></div>
   </div>
 </section>
 
 
-      <!-- MURALI -->
-      <div class="flex flex-col lg:flex-row-reverse items-center gap-12">
-        <img
-          src="images/murali.jpg"
-          class="w-full lg:w-2/3 "
-          alt="Restauro murale">
+<section>
+  <div class="section-header mb-6">
+    <h3 class="section-title font-display">
+  <span class="opacity-30">03</span><span class="section-dot">.</span>Materiali Lapidei
+</h3>
+    <div class="section-line"></div>
+  </div>
 
-        <div class="lg:w-1/3">
-          <h3 class="font-display text-2xl font-bold mb-4">Murali e Affreschi</h3>
-          <p class="text-stone-600 leading-relaxed">
-            Restauro di superfici decorate, affreschi e pitture murali,
-            con tecniche rispettose dei materiali e della storia dell’opera.
-          </p>
-        </div>
+  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+    <div class="group">
+      <div class="image-card">
+        <img src="images/Lapidei-1.jpeg">
       </div>
+    </div>
+    <div class="group"><div class="image-card"><img src="images/Lapidei-2.jpeg"></div></div>
+    <div class="group"><div class="image-card"><img src="images/Lapidei-3.jpeg"></div></div>
+    <div class="group"><div class="image-card"><img src="images/Lapidei-4.jpeg"></div></div>
+    <div class="group"><div class="image-card"><img src="images/Lapidei-5.jpeg"></div></div>
+  </div>
+</section>
 
-      <!-- TINTEGGIATURE -->
-      <div class="flex flex-col lg:flex-row items-center gap-12">
-        <img
-          src="images/tinteggiature.jpg"
-          class="w-full lg:w-2/3 "
-          alt="Tinteggiature storiche">
+<section>
+  <div class="section-header mb-6 flex justify-end">
+    <div class="text-right">
+      <h3 class="section-title font-display">
+  <span class="opacity-30">04</span><span class="section-dot">.</span>Stucchi
+</h3>
+      <div class="section-line ml-auto"></div>
+    </div>
+  </div>
 
-        <div class="lg:w-1/3">
-          <h3 class="font-display text-2xl font-bold mb-4">Tinteggiature</h3>
-          <p class="text-stone-600 leading-relaxed">
-            Interventi su edifici storici e contemporanei,
-            con attenzione alla compatibilità dei materiali e al contesto architettonico.
-          </p>
-        </div>
+  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+    <div class="group"><div class="image-card"><img src="images/Stucchi_1.jpeg"></div></div>
+    <div class="group"><div class="image-card"><img src="images/Stucchi_2.jpeg"></div></div>
+    <div class="group"><div class="image-card"><img src="images/Stucchi_3.jpeg"></div></div>
+    <div class="group"><div class="image-card"><img src="images/Stucchi_4.jpeg"></div></div>
+    <div class="group"><div class="image-card"><img src="images/Stucchi_5.jpeg"></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="section-header mb-6">
+      <h3 class="section-title font-display">
+  <span class="opacity-30">05</span><span class="section-dot">.</span>Archeologia
+</h3>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+    <div class="group">
+      <div class="image-card">
+        <img src="images/Archeologia_1.jpeg">
       </div>
+    </div>
+    <div class="group"><div class="image-card"><img src="images/Archeologia_2.jpeg"></div></div>
+    <div class="group"><div class="image-card"><img src="images/Archeologia_3.jpeg"></div></div>
+    <div class="group"><div class="image-card"><img src="images/Archeologia_4.jpeg"></div></div>
+    <div class="group"><div class="image-card"><img src="images/Archeologia_5.jpeg"></div></div>
+  </div>
+</section>
 
-      <!-- ARCHEOLOGIA -->
-      <div class="flex flex-col lg:flex-row-reverse items-center gap-12">
-        <img
-          src="images/archeologia.jpg"
-          class="w-full lg:w-2/3"
-          alt="Interventi archeologici">
+<section>
+  <div class="section-header mb-6 flex justify-end">
+    <div class="text-right">
+     <h3 class="section-title font-display">
+  <span class="opacity-30">06</span><span class="section-dot">.</span>Archeologia industriale
+</h3>
+      <div class="section-line ml-auto"></div>
+    </div>
+  </div>
 
-        <div class="lg:w-1/3">
-          <h3 class="font-display text-2xl font-bold mb-4">Archeologia</h3>
-          <p class="text-stone-600 leading-relaxed">
-            Conservazione e trattamento di contesti e reperti archeologici,
-            nel rispetto delle stratificazioni storiche.
-          </p>
-        </div>
-      </div>
+  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+    <div class="group"><div class="image-card"><img src="images/Archeologia_Industriale_1.jpeg"></div></div>
+    <div class="group"><div class="image-card"><img src="images/Archeologia_Industriale_2.jpeg"></div></div>
+    <div class="group"><div class="image-card"><img src="images/Archeologia_Industriale_3.jpeg"></div></div>
+    <div class="group"><div class="image-card"><img src="images/Archeologia_Industriale_4.jpeg"></div></div>
+    <div class="group"><div class="image-card"><img src="images/Archeologia_Industriale_5.jpeg"></div></div>
+  </div>
+</section>
+
 
     </div>
 
