@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
   banner.innerHTML = `
     <div id="cookie-box" class="minimized">
       <div class="cookie-header">
-        <img src="images/logo_footer.png" alt="Logo" class="cookie-logo">
+        <img src="/images/logo_footer.png" alt="Logo" class="cookie-logo">
        
        <div class="cookie-title-container">
         <svg width="46" height="46" viewBox="0 0 64 46" fill="none" xmlns="http://www.w3.org/2000/svg">
